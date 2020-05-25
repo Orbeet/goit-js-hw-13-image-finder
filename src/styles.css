@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-image: url('./images/bg-pattern.png');
+  margin: 0;
+}
+
+.gallery {
+  list-style: none;
+}
+
+.input-field {
+  margin: 40px;
+  width: 600px;
+  font-size: 20px;
+  padding: 16px;
+  border: 2px solid green;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.gallery-item {
+  max-width: 30%;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+}
+
+.load-more-btn {
+  margin: 40px;
+  padding: 15px 30px;
+  border: 2px solid green;
+  background-color: rgb(47, 156, 170);
+  color: balck;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.back-to-top {
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 60px;
+  bottom: 60px;
+  background: #ffffff url(./images/baseline_expand_less_black_18dp.png)
+    no-repeat center 43%;
+  border-radius: 30px;
+  background-color: rgb(47, 156, 170);
+}
+
+.load-more-btn:active,
+.back-to-top:active {
+  transform: translate(1px, 1px);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+}
